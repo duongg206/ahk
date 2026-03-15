@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Rising of the Shield Hero - Premium Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="movie-title">The Rising of the Shield Hero</div>
+    <div class="status-pill">
+        Màn hình: <span id="wakeLockStatus">Tự động</span>
+    </div>
+</header>
+
+<div class="main-content">
+    <div class="player-container">
+        <div id="playerPlaceholder" style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); color: var(--text-dim);">
+        Vui lòng chọn tập phim để bắt đầu
+    </div>
+        <iframe id="videoPlayer" 
+        loading="lazy" 
+        src="about:blank" 
+        allowfullscreen 
+        allow="autoplay; fullscreen"
+        sandbox="allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation">
+</iframe>
+    </div>
+
+    <div class="season-tabs" id="partSelector">
+        <div class="tab active" onclick="changePart(1)">Phần 1</div>
+        <div class="tab" onclick="changePart(2)">Phần 2</div>
+        <div class="tab" onclick="changePart(3)">Phần 3</div>
+        <div class="tab" onclick="changePart(4)">Phần 4</div>
+    </div>
+
+    <div class="episodes-label">Tập phim</div>
+    <div id="episodeGrid" class="episode-grid"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
